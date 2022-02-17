@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <title>Simulador de Investimentos</title>
+
+</head>
+<body>
+    <main>
+        <h1>Simulador de Investimentos<h1>
+
+            <h4>Simulador</h4>
+            
+    
+    <section id="container">
+            
+        <div class="simulador">
+               
+            <form class="form" id="form">
+                   
+                    <fieldset class="grupo-formulario">
+
+                        <div class="titulo-rendimento">
+                            <h6>Rendimento</h6> <i class="fas fa-info"></i>
+                        </div>
+                        <div class="titulo-rendimento">
+                            <h6>Tipos de Indexação</h6> <i class="fas fa-info" alt="Informação sobre renda"></i>
+                        </div>
+
+                    </fieldset>
+                    
+                    <fieldset class="grupo-formulario">
+
+                        <div class="btn-group botao-rendimento" role="group" aria-label="Basic example">
+                            <button type="button" id="botao-bruto" class="btn btn-outline">
+                                <span class="icone3">&#10003;</span> Bruto
+                            </button>
+                        
+                            <button type="button" id="botao-liquido" class="btn btn-outline">
+                                <span class="icone4">&#10003;</span> Líquido
+                            </button>
+                        </div>
+                        
+                        <div class="btn-group botao-indexacao" role="group" aria-label="Basic example">
+                            <button type="button" id="botao-pre" class="btn btn-outline">
+                                <span class="icone">&#10003;</span> Pré
+                            </button>
+                        
+                            <button type="button" id="botao-pos" class="btn btn-outline">
+                                <span class="icone1">&#10003;</span> Pós
+                            </button>
+                            <button type="button" id="botao-fix" class="btn btn-outline">
+                                <span class="icone2">&#10003;</span> Fixado
+                            </button>
+                        </div>
+
+                    </fieldset>
+                            
+                    
+                    <fieldset class="grupo-formulario">
+                        <div class="campo aporte-inicial ">
+                            <label for="aporte">Aporte Inicial</label>
+                            <input type="text" name="aporte" id="aporte">
+
+                            <small>Aporte deve ser um número</small>
+                        </div>
+                        <div class="campo aporte-mensal">
+                            <label for="aporte-mensal">Aporte Mensal</label>
+                            <input type="text" name="aporte-mensal" id="aporte-mensal">
+
+                            <small>Aporte deve ser um número</small>
+                        </div>
+                    </fieldset>
+
+
+                        
+                    <fieldset class="grupo-formulario">
+                        
+                            <div class="campo prazo">
+                                <label for="prazo">Prazo (em meses)</label>
+                                <input type="text" name="prazo" id="prazo">
+                                <small>Prazo deve ser um número</small>
+                            </div>
+                            <div class="campo rentabilidade">
+                                <label for="rentabilidade">Rentabilidade</label>
+                                <input type="text" name="rentabilidade" id="rentabilidade">
+                                <small>Rentabilidade deve ser um número</small>
+                            </div>
+                        
+                    </fieldset>
+
+                        
+                    <fieldset class="grupo-formulario">
+                        <div  class="campo ipca">
+                            <label  for="ipca">IPCA (ao ano)</label>
+                            <p class="campo-cdi" name="ipca" id="ipca"></p>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="cdi">CDI (ao ano)</label>
+                            <p class="campo-cdi" id="cdi"></p>
+                        </div>
+                    </fieldset>
+                
+    
+                    <fieldset class="grupo-formulario">
+                        <div class="botoes">
+                            <button type="reset" class="botao-limpar">Limpar campos</button>
+                        </div>
+                        <div class="botoes">
+                            <button type="submit" id="botao" class="botao-simular">Simular</button>
+                        </div>
+                    </fieldset>        
+               
+                </form>
+                
+        </div>
+            
+            
+            
+               
+                <div id="resultado" class="resultado">
+                    
+                    <h4>Resultado da Simulação</h4>
+                    
+        
+                    <div id="valor-bruto" class="valor-bruto">
+                        <h6>Valor Bruto</h6><br>
+                        <p>R$</p>
+                    </div>
+                    <div id="aliquota" class="aliquota">
+                        <h6>Aliquota IR</h6><br>
+                        <p>R$</p>
+                    </div>
+                    <div id="pago-ir" class="pago-ir">
+                        <h6>Valor Pago IR</h6><br>
+                        <p>R$</p>
+                    </div>
+                    <div id="final-liquido" class="final-liquido">
+                        <h6>Valor Final Líquido</h6><br>
+                        <p>R$</p>
+                    </div>
+                    <div id="total-investido" class="total-investido">
+                        <h6>Valor Total Investido</h6><br>
+                        <p>R$</p>
+                    </div>
+                    <div id="ganho-liquido" class="ganho-liquido">
+                        <h6>Ganho Líquido</h6><br>
+                        <p>R$</p>
+                    </div>
+                
+                </div>
+          
+        
+           
+
+    </section>
+
+    </main>
+
+    <script src="javascript/indicadores.js"></script>
+    <script src="javascript/simulador.js"></script> 
+    <script src="javascript/botao.js"></script>
+    <script src="javascript/validacao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+</body>
+</html>
