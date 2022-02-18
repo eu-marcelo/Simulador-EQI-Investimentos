@@ -8,7 +8,7 @@
 
  Para acessar o projeto basta utilizar o link:                      
 
- https://eu-marcelo.github.io/Simulador-EQI-Investimentos/
+ https://eu-marcelo.github.io/Simulador-EQI-Investimentos/front-end/
 
  E ai fazer as escolhas de tipos de investimentos, tipo de indexação, preencher os demais campos do formulário e realizar a simulação clicando no botão simular ao final do formulário.
 
