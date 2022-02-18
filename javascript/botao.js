@@ -69,3 +69,5 @@ botao.addEventListener('click', function() {
         resultado.style.display = 'none'
     }
 })
+
+
